@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 	if (s) {
 		// save ลง database (return เป็น Promise)
 
-		res.send({ node: ` ${process.env.NODE_ENV} 🐹  ` });
+		res.send({ node: ` ${process.env.NODE_ENV}  🐹  ` , kitty });
 	} else {
 		const err = { status: 404, message: "Not found !" };
 		next(err);

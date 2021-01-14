@@ -6,7 +6,7 @@ const Cat = mongoose.model("Cat", { name: String });
 router.get('/', function(req, res, next) {
     
 
-    let kitty = new Cat({ name: "JavaScript" });
+    let kitty = new Cat({ name: "Chulalongkorn University !" });
 	// save ลง database (return เป็น Promise)
 	kitty.save().then(() => console.log("Created Cat !"));
 	const s = true;

@@ -1,14 +1,14 @@
-let express = require('express');
-let path = require('path');
-let cookieParser = require('cookie-parser');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
 const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 
-let indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
 
-
-let app = express();
+const app = express();
 
 require("dotenv").config();
 app.use(helmet());
@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
+app.use('/user', userRouter);
 
 
 app.use('/static', express.static(path.join(__dirname, 'public')))

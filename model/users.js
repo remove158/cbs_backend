@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 let schema  = new Schema({
     username:{type:String,required:true},
     password:{type:String,required:true},
-    status:{type:Boolean,required:false},
-    refreshToken:{type:String,required:false},
+    status:{type:Boolean,required:false ,default:false},
 })
 
 

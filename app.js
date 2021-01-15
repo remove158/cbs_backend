@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -10,7 +12,7 @@ const userRouter = require('./routes/user');
 
 const app = express();
 
-require("dotenv").config();
+
 app.use(helmet());
 app.use(cors());
 app.use(morgan("tiny"));

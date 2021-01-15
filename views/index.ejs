@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/static/style.css' />
+        <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+      </head>
+<body>
+    <div class="container">
+        <% data.forEach( card => { %>
+            
+            <div id="<%= card.id %>" class= "card" ><%- card.name %></div> 
+        <% }) %> 
+    </div>
+    
+    <div class="container">
+        <form action="/post/" method="POST">
+            <div class="box">
+          
+                <h1>Little Blog</h1>
+                <textarea name="editor1"></textarea>
+            </div>
+            <br/>
+            <input class="btn green" type="submit" name="action" value="SEND">
+            <input class="btn red" type="submit" name="action" value="CLEAR">
+      
+        </form>
+        
+       
+    </div>
+ 
+  
+    <script>
+            CKEDITOR.replace( 'editor1' );
+            
+    </script>
+</body>
+</html>

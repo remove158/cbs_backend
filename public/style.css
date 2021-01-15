@@ -36,9 +36,28 @@ background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+
     border-radius: 5px;
     width : 50%;
     min-height: 200px;
-    overflow:hidden
+    overflow:hidden;
+    position: relative;
+
 }
 
+.card:hover{
+    background-color: rgb(255, 236, 236);
+    transform: rotate(0.2deg);
+}
+
+
+.delete svg{
+    transition: 0.3s;
+    position: absolute;
+    right : 2em;
+    width : 15px;
+    height: 15px;
+}
+.delete svg:hover{
+    fill:red;
+
+}
 
 .btn{
     border: none;

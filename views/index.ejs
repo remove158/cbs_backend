@@ -9,7 +9,9 @@
     <div class="container">
         <% data.forEach( card => { %>
             
-            <div id="<%= card.id %>" class= "card" ><%- card.name %></div> 
+            <div id="<%= card.id %>" class= "card" >
+                <div class="delete"> <%- include('delete.svg') %> </div>
+                <%- card.name %></div> 
         <% }) %> 
     </div>
     
